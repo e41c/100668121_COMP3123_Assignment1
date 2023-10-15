@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
+const userController = require('../controllers/userController');
 
-// Define your routes for user-related operations
-// Example: POST /api/v1/user/signup
+router.post('/signup', userController.signup);
+router.post('/login', userController.login);
 
 module.exports = router;

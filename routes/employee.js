@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const Employee = require('../models/Employee');
+const employeeController = require('../controllers/employeeController');
 
-// Define your routes for employee-related operations
-// Example: GET /api/v1/emp/employees
+router.get('/employees', employeeController.getAllEmployees);
+router.post('/employees', employeeController.createEmployee);
+router.get('/employees/:eid', employeeController.getEmployeeById);
+router.put('/employees/:eid', employeeController.updateEmployee);
+router.delete('/employees', employeeController.deleteEmployee);
 
 module.exports = router;
