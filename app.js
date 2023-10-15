@@ -3,6 +3,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const database = require('./config/database');
 
+const DB_CONNECTION_STRING = "mongodb+srv://e41c:3FiLVFHmjtLpYszS@cluster0.ijkhohf.mongodb.net/?retryWrites=true&w=majority"
+
+
 // Middleware
 app.use(bodyParser.json());
 
